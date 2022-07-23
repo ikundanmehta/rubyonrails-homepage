@@ -1,0 +1,508 @@
+/* Global reset and Font-face */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Calibre";
+  src: url("./asset/fonts/calibre-regular.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Calibre";
+  src: url("./asset/fonts/calibre-semibold.woff2") format("woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Calibre";
+  src: url("./asset/fonts/calibre-bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("./asset/fonts/IBMPlexMono-Text.woff2") format("woff2");
+}
+
+/* General styling */
+body {
+  font-family: "Calibre", "IBM Plex Mono", sans-serif;
+  color: #000;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+a:link,
+a:visited {
+  color: #261b23;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: #d30001;
+  text-decoration: none;
+}
+
+/* Component & Sections styling */
+header {
+  padding: 10px 0 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+header a:link,
+header a:visited {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+header a:hover,
+header a:active {
+  background-color: rgb(240, 231, 233);
+}
+
+header svg {
+  cursor: pointer;
+  background-color: #d30001;
+  fill: #fff;
+  height: 115px;
+  width: 115px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+header svg:hover {
+  background-color: #261b23;
+  fill: #fff;
+}
+
+#remove-padding {
+  padding: 0;
+  background-color: #fff;
+  border: 0;
+}
+
+/* View-port sharing */
+header {
+  height: 35vh;
+}
+
+main {
+  height: 65vh;
+}
+
+/* Main styling */
+main h1 {
+  color: #d30001;
+  font-size: 78px;
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.01rem;
+  text-align: center;
+  margin: 0 30px;
+}
+
+main p {
+  font-size: 36px;
+  font-weight: 500;
+  text-align: center;
+  margin: 32px 24px;
+}
+
+main span {
+  font-weight: 700;
+}
+
+.download-link {
+  display: flex;
+  justify-content: center;
+}
+
+main a:link,
+main a:visited {
+  background-color: rgb(240, 231, 233);
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+/* Video section styling */
+.video-section {
+  width: 90%;
+  margin: 0px auto;
+}
+
+.video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 80px 20px 0px rgba(240, 231, 233, 1);
+  margin: 0 0 64px 0;
+}
+
+.social-proof h2 {
+  color: #d30001;
+  font-size: 78px;
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.01rem;
+  text-align: center;
+  margin: 0 30px;
+}
+
+.social-proof p {
+  font-size: 36px;
+  font-weight: 500;
+  text-align: center;
+  margin: 32px 24px;
+}
+
+.social-proof p:last-child {
+  padding: 0 100px;
+  font-size: 28px;
+  margin-bottom: 75px;
+}
+
+.social-proof span {
+  font-weight: 700;
+}
+
+.company-logo {
+  padding: 25px 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 25px;
+}
+
+.company-logo img {
+  cursor: pointer;
+  background-color: rgba(240, 231, 233, 1);
+  border: 3px solid rgba(240, 231, 233, 1);
+  border-radius: 12px;
+  height: 80px;
+}
+
+.company-logo img:hover {
+  border: 3px solid #d30001;
+}
+
+.coinbase,
+.soundcloud,
+.cookpad {
+  transform: translate(+50%);
+}
+
+/* Team-section styling */
+.team-section {
+  background-color: rgba(240, 231, 233, 1);
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  padding: 75px 0 225px 0;
+  text-align: center;
+}
+
+.team-section h3 {
+  color: #d30001;
+  font-size: 78px;
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.01rem;
+  margin: 0 30px;
+}
+
+.team-section p {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 32px 48px;
+}
+
+.team-section span {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.team-section a:link,
+.team-section a:visited {
+  font-weight: 700;
+}
+
+.meet-team-link:link {
+  font-size: 32px;
+  text-decoration: underline;
+}
+
+.meet-team-link-icon {
+  height: 24px;
+  width: 24px;
+  margin-bottom: -5px;
+}
+
+/* About section Styling */
+.about {
+  background-color: #fff;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
+
+.about .container {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 15px 70px 5px rgba(38, 27, 35, 0.15);
+  width: 90%;
+  padding: 60px 100px;
+  transform: translate(0, -25%);
+  text-align: center;
+}
+
+.about h3 {
+  color: #d30001;
+  font-size: 78px;
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.01rem;
+}
+
+.about p {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 32px 48px;
+}
+
+.about p:last-child {
+  font-size: 26px;
+  font-weight: 500;
+  margin: 32px 48px;
+  color: #5a5153;
+}
+
+.about span {
+  font-weight: 700;
+}
+
+/* Docs section */
+.docs-section .container {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 15px 70px 5px rgba(38, 27, 35, 0.15);
+  width: 90%;
+  padding: 75px 100px;
+  transform: translate(0, -25%);
+  text-align: center;
+}
+
+.docs-section h3 {
+  color: #d30001;
+  font-size: 78px;
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.01rem;
+}
+
+.docs-section p {
+  font-size: 26px;
+  font-weight: 500;
+  margin: 32px 48px;
+  color: #5a5153;
+}
+
+.docs-section span {
+  font-weight: 700;
+  color: #000;
+}
+
+.docs-section a:link,
+.docs-section a:visited {
+  font-weight: 700;
+}
+
+/* more-info section styling */
+.more-info .container {
+  width: 90%;
+  text-align: center;
+}
+
+.more-info h3 {
+  color: #d30001;
+  font-size: 78px;
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.01rem;
+}
+
+/* Cards styling */
+.cards {
+  margin: 75px 0 50px 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 30px;
+}
+
+.cards a:link,
+.cards a:visited {
+  color: #000;
+  border: 3.5px solid rgb(210, 210, 210);
+  border-radius: 10px;
+  padding: 0 25px;
+
+  position: relative; /* For Card banner */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+}
+
+.cards a:hover,
+.cards a:active {
+  border: 3.5px solid #d30001;
+}
+
+.cards h4 {
+  font-size: 28px;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-bottom: 12px;
+}
+
+.cards p {
+  font-size: 18px;
+  color: #5a5153;
+}
+
+/* Card Top Banner */
+#banner-text {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  color: #fff;
+}
+
+.card-top-icon {
+  height: 18px;
+  width: 18px;
+  stroke: #fff;
+}
+
+.cards a div {
+  background-color: #d30001;
+  color: #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  padding: 5px 8px;
+
+  position: absolute;
+  top: 0;
+  transform: translate(0, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.more-info-paragraph {
+  color: #5a5153;
+  font-size: 26px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.more-info-paragraph:last-child {
+  margin-bottom: 75px;
+}
+
+.more-info-paragraph a:link,
+.more-info-paragraph a:visited {
+  color: #d30001;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.more-info-paragraph a:hover,
+.more-info-paragraph a:active {
+  color: #000;
+}
+
+.more-info-paragraph span {
+  font-weight: 700;
+  color: #000;
+}
+
+.twitter-icon {
+  height: 24px;
+  width: 24px;
+  margin-bottom: -5px;
+  margin-right: 5px;
+}
+
+.twitter-icon:hover {
+  fill: #000;
+}
+
+.web-icon {
+  height: 24px;
+  width: 24px;
+  margin-bottom: -5px;
+  margin-right: 5px;
+}
+
+/* Footer section */
+footer {
+  background-color: rgba(240, 231, 233, 1);
+  padding: 70px 0;
+  border-top-left-radius: 65%;
+  border-top-right-radius: 5%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+footer svg {
+  cursor: pointer;
+}
+
+.footer-rubyonrails-icon {
+  height: 32px;
+  width: auto;
+  fill: #d30001;
+}
+
+.footer-rubyonrails-icon:hover {
+  fill: #000;
+}
+
+.footer-link {
+  display: flex;
+  gap: 32px;
+}
+
+.footer-link a:link,
+.footer-link a:visited {
+  font-size: 18px;
+  color: #5a5153;
+}
+
+.footer-link a:hover,
+.footer-link a:active {
+  color: #000;
+  text-decoration: underline;
+}
